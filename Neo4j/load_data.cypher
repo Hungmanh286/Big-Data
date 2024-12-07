@@ -49,5 +49,5 @@
 7. Biểu diễn phản hồi giữa các tin nhắn.
     LOAD CSV FROM "file:///chat_respond_team_chat.csv" AS row
     MERGE (c1:ChatItem {id: toInteger(row[0])})
-    MERGE (c2:User {id: toInteger(row[1])})
+    MERGE (c2:ChatItem {id: toInteger(row[1])})
     MERGE (c1)-[:RespondedTo {timeStamp: row[2]}]->(c2)
