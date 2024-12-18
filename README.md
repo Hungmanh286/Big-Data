@@ -4,7 +4,7 @@
 
 ### 📚 Overview:
 
-## This project leverages **Neo4j**, a powerful graph database, to analyze chat data. It enables insights into user interactions, message patterns, and network dynamics by visualizing relationships and running graph-based queries.
+ This project leverages **Neo4j**, a powerful graph database, to analyze chat data. It enables insights into user interactions, message patterns, and network dynamics by visualizing relationships and running graph-based queries.
 
 ---
 
