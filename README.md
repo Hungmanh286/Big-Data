@@ -6,7 +6,6 @@
 
  This project leverages **Neo4j**, a powerful graph database, to analyze chat data. It enables insights into user interactions, message patterns, and network dynamics by visualizing relationships and running graph-based queries.
 
----
 
 #### Danh sách thành viên Team Chill guy:
 
@@ -16,7 +15,7 @@
 - Đinh Văn Sinh - 22022615.
 - Nguyễn Mạnh Hùng - 22022623.
 
----
+
 
 ## 🛠 Features:
 
@@ -28,8 +27,6 @@
   - Keyword-based message analysis.
   - Community detection.
 - **Visualization**: Use Neo4j Browser or external tools to visualize chat networks.
-
----
 
 #### 🗂 Project Structure:
 
