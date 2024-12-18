@@ -2,11 +2,10 @@
 
 ## Graph Analytics With Chat Data Using Neo4j
 
-### 📚 Overview:
+#### 📚 Overview:
 
-## This project leverages **Neo4j**, a powerful graph database, to analyze chat data. It enables insights into user interactions, message patterns, and network dynamics by visualizing relationships and running graph-based queries.
+- This project leverages **Neo4j**, a powerful graph database, to analyze chat data. It enables insights into user interactions, message patterns, and network dynamics by visualizing relationships and running graph-based queries.
 
----
 
 #### Danh sách thành viên Team Chill guy:
 
@@ -16,7 +15,7 @@
 - Đinh Văn Sinh - 22022615.
 - Nguyễn Mạnh Hùng - 22022623.
 
----
+
 
 ## 🛠 Features:
 
@@ -29,13 +28,12 @@
   - Community detection.
 - **Visualization**: Use Neo4j Browser or external tools to visualize chat networks.
 
----
-
 #### 🗂 Project Structure:
 
 ```
 ├── data/                   # Raw chat data files (CSV)
 ├── Neo4j/                  # Cypher query templates
+├── docs                    # Images for README.md
 ├── README.md               # Project documentation (this file)
 ├── report.pdf              # Repost
 └── Link Slide              # Link slide
