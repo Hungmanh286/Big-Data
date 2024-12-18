@@ -48,3 +48,5 @@
 ## 📧 Contact
 
 For questions or support, please email **tuanthanh2kk4@gmail.com** or create an issue in the repository.
+
+![#### Thanks for watching!!!](docs/img/thanks-for-watching.jpeg)
