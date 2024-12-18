@@ -25,6 +25,11 @@
 └── Link Slide              # Link slide
 ```
 
+#### Data Structure:
+
+![Image alt text](docs/img/data.png)
+
+
 ## 🛠 Features:
 
 - **Data Ingestion**: Import chat data (e.g., users, messages, timestamps) into a Neo4j database.
@@ -36,9 +41,7 @@
   - Community detection.
 - **Visualization**: Use Neo4j Browser or external tools to visualize chat networks.
 
-#### Data Structure:
 
-![Image alt text](docs/img/data.png)
 
 ## 📧 Contact
 
