@@ -6,13 +6,13 @@
 
 - This project leverages **Neo4j**, a powerful graph database, to analyze chat data. It enables insights into user interactions, message patterns, and network dynamics by visualizing relationships and running graph-based queries.
 
-#### Danh sách thành viên Team Chill guy:
+#### Danh sách thành viên và công việc team Chill guy:
 
-- Nguyễn Tuấn Thành - 220222624.
-- Nguyễn Công Thành - 22022623.
-- Vũ Đình Thọ - 22022580.
-- Đinh Văn Sinh - 22022615.
-- Nguyễn Mạnh Hùng - 22022623.
+- Nguyễn Tuấn Thành - 220222624: Viết phần kết luận và hướng phát triển.
+- Nguyễn Công Thành - 22022623: Viết slide phần Bigdata, NoSQL, Neo4j.
+- Vũ Đình Thọ - 22022580: Dùng Neo4j để phân tích.
+- Đinh Văn Sinh - 22022615: Tìm hiểu thuật toán Pagerank và thuật toán LPA.
+- Nguyễn Mạnh Hùng - 22022623: Dùng Neo4j để phân tích.
 
 #### 🗂 Project Structure:
 
