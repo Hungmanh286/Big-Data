@@ -11,7 +11,7 @@ Big Data course project (team of 5). We load team-chat event logs into **Neo4j**
 ## What we did
 
 - **Ingestion:** load six CSV event logs (team creation, join, leave, chat item, mention, reply) with `LOAD CSV` ([Neo4j/load_data.cypher](Neo4j/load_data.cypher))
-- **Graph modelling:** users, teams and chat items as nodes; membership, authorship, mentions and replies as relationships
+- **Graph modelling:** `User`, `Team`, `TeamChatSession` and `ChatItem` nodes; `Joins`, `Leaves`, `CreatesSession`, `CreatesChat`, `PartOf`, `Mentioned` and `RespondedTo` relationships
 - **Analysis** ([Neo4j/analyst_data.cypher](Neo4j/analyst_data.cypher)):
   - most active users and teams
   - **PageRank** (`gds.pageRank`) to rank influential users in the mention/reply network
