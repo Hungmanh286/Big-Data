@@ -1,50 +1,49 @@
-![Image alt text](docs/img/neo4j.png)
+# Graph Analytics on Team-Chat Data with Neo4j
 
-## Graph Analytics With Chat Data Using Neo4j
+![Neo4j](https://img.shields.io/badge/Neo4j-4581C3?logo=neo4j&logoColor=white)
+![Cypher](https://img.shields.io/badge/Cypher-008CC1)
+![Graph Data Science](https://img.shields.io/badge/Neo4j_GDS-PageRank_%7C_LPA-018BFF)
 
-#### 📚 Overview:
+Big Data course project (team of 5). We load team-chat event logs into **Neo4j**, model users, teams and messages as a graph, and use Cypher plus the Graph Data Science library to find influential users and communities.
 
-- This project leverages **Neo4j**, a powerful graph database, to analyze chat data. It enables insights into user interactions, message patterns, and network dynamics by visualizing relationships and running graph-based queries.
+![Graph model](docs/img/neo4j.png)
 
-#### Danh sách thành viên và công việc team Chill guy:
+## What we did
 
-- Nguyễn Tuấn Thành - 220222624: Viết phần kết luận và hướng phát triển.
-- Nguyễn Công Thành - 22022623: Viết slide phần Bigdata, NoSQL, Neo4j.
-- Vũ Đình Thọ - 22022580: Dùng Neo4j để phân tích.
-- Đinh Văn Sinh - 22022615: Tìm hiểu thuật toán Pagerank và thuật toán LPA.
-- Nguyễn Mạnh Hùng - 22022623: Dùng Neo4j để phân tích.
+- **Ingestion:** load six CSV event logs (team creation, join, leave, chat item, mention, reply) with `LOAD CSV` ([Neo4j/load_data.cypher](Neo4j/load_data.cypher))
+- **Graph modelling:** users, teams and chat items as nodes; membership, authorship, mentions and replies as relationships
+- **Analysis** ([Neo4j/analyst_data.cypher](Neo4j/analyst_data.cypher)):
+  - most active users and teams
+  - **PageRank** (`gds.pageRank`) to rank influential users in the mention/reply network
+  - **Label Propagation** (`gds.labelPropagation`) for community detection
+- **Visualisation** in Neo4j Browser
 
-#### 🗂 Project Structure:
+## Data
+
+![Data schema](docs/img/data.png)
+
+## Repository layout
 
 ```
-├── data/                   # Raw chat data files (CSV)
-├── Neo4j/                  # Cypher query templates
-├── docs                    # Images for README.md
-├── README.md               # Project documentation (this file)
-├── report.pdf              # Repost
-└── Link Slide              # Link slide
+data/      Raw chat event logs (CSV)
+Neo4j/     Cypher scripts: load_data.cypher, analyst_data.cypher
+docs/img/  Figures
+Report.pdf Full report
 ```
 
-#### Data Structure:
+## Run
 
-![Image alt text](docs/img/data.png)
+1. Start Neo4j 5 with the Graph Data Science plugin and copy `data/*.csv` into its `import/` folder.
+2. Run `Neo4j/load_data.cypher`, then the queries in `Neo4j/analyst_data.cypher`.
 
+📄 [Report](Report.pdf) · 🎞️ [Slides](https://www.canva.com/design/DAGYauaAPKs/OyvuXBGi9xO2_bxaVBQKfQ/view?utm_content=DAGYauaAPKs&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 
-## 🛠 Features:
+## Team
 
-- **Data Ingestion**: Import chat data (e.g., users, messages, timestamps) into a Neo4j database.
-- **Graph Modeling**: Represent chats as a graph with nodes (e.g., Users, Messages, Rooms) and relationships (e.g., SENT, RECEIVED, BELONGS_TO).
-- **Advanced Queries**: Run Cypher queries to uncover insights such as:
-  - Most active users.
-  - Popular chat rooms.
-  - Keyword-based message analysis.
-  - Community detection.
-- **Visualization**: Use Neo4j Browser or external tools to visualize chat networks.
-
-
-
-## 📧 Contact
-
-For questions or support, please email **tuanthanh2kk4@gmail.com** or create an issue in the repository.
-
-![#### Thanks for watching!!!](docs/img/thanks-for-watching.jpeg)
+| Member | Contribution |
+|---|---|
+| Nguyễn Mạnh Hùng | Graph analysis with Neo4j |
+| Vũ Đình Thọ | Graph analysis with Neo4j |
+| Đinh Văn Sinh | PageRank and Label Propagation research |
+| Nguyễn Công Thành | Slides: Big Data, NoSQL, Neo4j |
+| Nguyễn Tuấn Thành | Conclusion and future work |
